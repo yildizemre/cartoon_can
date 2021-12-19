@@ -14,24 +14,12 @@ data2 = cv2.imencode(".jpg", frame)[1]
 
 headers = {'Accept': 'application/json', }
 textfile = {
-
 'screen_image': ('babam.jpg', data2.tobytes() , 'image/jpeg', {'Expires': '0'})
-
-
-
 }
 
-data={
-        'person_id':"1",
-            'date':"2"
-}
 try:
-    response = requests.post('http://localhost:5000/api/file', files=textfile,headers=headers,data=data)
-    if response.status_code==200:
-        f=open('./key_logs.txt','w')
-        f.write(" ")
-        f.close()
-    print(response.text)
+    response = requests.post('http://localhost:8000/api/file', files=textfile,headers=headers)
+    print((response.text))
 except Exception as e:
     print(e)
 
