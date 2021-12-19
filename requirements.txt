@@ -1,2 +1,11 @@
 torch >= 1.7.1
 torchvision
+fastapi>=0.68.0,<0.69.0
+pydantic>=1.8.0,<2.0.0
+uvicorn>=0.15.0,<0.16.0
+python-multipart
+pytesseract
+opencv-python
+pdf2image
+mediapipe
+requests
