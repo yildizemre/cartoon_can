@@ -18,7 +18,6 @@ import torch
 from torchvision.transforms.functional import to_tensor, to_pil_image
 from model import Generator
 import datetime
-import json
 from starlette.responses import StreamingResponse
 from fastapi.responses import FileResponse
 
